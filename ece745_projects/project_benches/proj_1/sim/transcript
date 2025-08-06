@@ -1,0 +1,968 @@
+# //  Questa Sim
+# //  Version 2022.2_1 linux May 19 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -classdebug -msgmode both -do "set NoQuitOnFinish 1; do wave.do" optimized_debug_top_tb 
+# Start time: 21:38:23 on Mar 25,2023
+# Loading sv_std.std
+# Loading work.macrro(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.wb_if(fast__1)
+# Loading work.i2c_if_sv_unit(fast)
+# Loading work.i2c_if(fast__1)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.wishbone(rtl)#1
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.regblock(rtl)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+# Loading work.mbyte(rtl)#1
+# Loading work.mbit(rtl)#1
+# Loading work.conditioner_mux(str)#1
+# Loading work.conditioner(str)#1
+# Loading work.filter(rtl)#1
+# Loading work.bus_state(rtl)#1
+# set NoQuitOnFinish 1
+# 1
+#  do wave.do
+run 30 ms
+# ------------Incrementing 32 Writes------------
+# Start Detected at time 47500
+# Slave address  34 at time 6961500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :   0
+# WRITE DATA :   1
+# WRITE DATA :   2
+# WRITE DATA :   3
+# WRITE DATA :   4
+# WRITE DATA :   5
+# WRITE DATA :   6
+# WRITE DATA :   7
+# WRITE DATA :   8
+# WRITE DATA :   9
+# WRITE DATA :  10
+# WRITE DATA :  11
+# WRITE DATA :  12
+# WRITE DATA :  13
+# WRITE DATA :  14
+# WRITE DATA :  15
+# WRITE DATA :  16
+# WRITE DATA :  17
+# WRITE DATA :  18
+# WRITE DATA :  19
+# WRITE DATA :  20
+# WRITE DATA :  21
+# WRITE DATA :  22
+# WRITE DATA :  23
+# WRITE DATA :  24
+# WRITE DATA :  25
+# WRITE DATA :  26
+# WRITE DATA :  27
+# WRITE DATA :  28
+# WRITE DATA :  29
+# WRITE DATA :  30
+# WRITE DATA :  31
+# Stop Detected at time 299322500 
+# 
+# ------------Incrementing 32 Reads------------
+# Start Detected at time 299812500
+# Slave address  34 at time 306726500
+# I2C_BUS READ Transfer:
+# READ DATA : 100
+# READ DATA : 101
+# READ DATA : 102
+# READ DATA : 103
+# READ DATA : 104
+# READ DATA : 105
+# READ DATA : 106
+# READ DATA : 107
+# READ DATA : 108
+# READ DATA : 109
+# READ DATA : 110
+# READ DATA : 111
+# READ DATA : 112
+# READ DATA : 113
+# READ DATA : 114
+# READ DATA : 115
+# READ DATA : 116
+# READ DATA : 117
+# READ DATA : 118
+# READ DATA : 119
+# READ DATA : 120
+# READ DATA : 121
+# READ DATA : 122
+# READ DATA : 123
+# READ DATA : 124
+# READ DATA : 125
+# READ DATA : 126
+# READ DATA : 127
+# READ DATA : 128
+# READ DATA : 129
+# READ DATA : 130
+# READ DATA : 131
+# Stop Detected at time 599055500 
+# 
+# ------------Repeated Start test sequence------------
+# Start Detected at time 599545500
+# Slave address  34 at time 606459500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :   0
+# WRITE DATA :   1
+# WRITE DATA :   2
+# WRITE DATA :   3
+# WRITE DATA :   4
+# WRITE DATA :   5
+# WRITE DATA :   6
+# WRITE DATA :   7
+# WRITE DATA :   8
+# WRITE DATA :   9
+# WRITE DATA :  10
+# WRITE DATA :  11
+# WRITE DATA :  12
+# WRITE DATA :  13
+# WRITE DATA :  14
+# WRITE DATA :  15
+# WRITE DATA :  16
+# WRITE DATA :  17
+# WRITE DATA :  18
+# WRITE DATA :  19
+# WRITE DATA :  20
+# WRITE DATA :  21
+# WRITE DATA :  22
+# WRITE DATA :  23
+# WRITE DATA :  24
+# WRITE DATA :  25
+# WRITE DATA :  26
+# WRITE DATA :  27
+# WRITE DATA :  28
+# WRITE DATA :  29
+# WRITE DATA :  30
+# WRITE DATA :  31
+# Repeated Start Detected at time 898980500
+# Slave address  34 at time 905894500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :   0
+# WRITE DATA :   1
+# WRITE DATA :   2
+# WRITE DATA :   3
+# WRITE DATA :   4
+# WRITE DATA :   5
+# WRITE DATA :   6
+# WRITE DATA :   7
+# WRITE DATA :   8
+# WRITE DATA :   9
+# WRITE DATA :  10
+# WRITE DATA :  11
+# WRITE DATA :  12
+# WRITE DATA :  13
+# WRITE DATA :  14
+# WRITE DATA :  15
+# WRITE DATA :  16
+# WRITE DATA :  17
+# WRITE DATA :  18
+# WRITE DATA :  19
+# WRITE DATA :  20
+# WRITE DATA :  21
+# WRITE DATA :  22
+# WRITE DATA :  23
+# WRITE DATA :  24
+# WRITE DATA :  25
+# WRITE DATA :  26
+# WRITE DATA :  27
+# WRITE DATA :  28
+# WRITE DATA :  29
+# WRITE DATA :  30
+# WRITE DATA :  31
+# Stop Detected at time 1198255500 
+# 
+# ------------Alternate Writes and Reads------------
+# Start Detected at time 1198745500
+# Slave address  34 at time 1205659500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  64
+# Stop Detected at time 1218121500 
+# 
+# Start Detected at time 1218611500
+# Slave address  34 at time 1225525500
+# I2C_BUS READ Transfer:
+# READ DATA :  63
+# Stop Detected at time 1237986500 
+# 
+# Start Detected at time 1238476500
+# Slave address  34 at time 1245390500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  65
+# Stop Detected at time 1257852500 
+# 
+# Start Detected at time 1258342500
+# Slave address  34 at time 1265256500
+# I2C_BUS READ Transfer:
+# READ DATA :  62
+# Stop Detected at time 1277717500 
+# 
+# Start Detected at time 1278207500
+# Slave address  34 at time 1285121500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  66
+# Stop Detected at time 1297583500 
+# 
+# Start Detected at time 1298073500
+# Slave address  34 at time 1304987500
+# I2C_BUS READ Transfer:
+# READ DATA :  61
+# Stop Detected at time 1317448500 
+# 
+# Start Detected at time 1317938500
+# Slave address  34 at time 1324852500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  67
+# Stop Detected at time 1337314500 
+# 
+# Start Detected at time 1337804500
+# Slave address  34 at time 1344718500
+# I2C_BUS READ Transfer:
+# READ DATA :  60
+# Stop Detected at time 1357179500 
+# 
+# Start Detected at time 1357669500
+# Slave address  34 at time 1364583500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  68
+# Stop Detected at time 1377045500 
+# 
+# Start Detected at time 1377535500
+# Slave address  34 at time 1384449500
+# I2C_BUS READ Transfer:
+# READ DATA :  59
+# Stop Detected at time 1396910500 
+# 
+# Start Detected at time 1397400500
+# Slave address  34 at time 1404314500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  69
+# Stop Detected at time 1416776500 
+# 
+# Start Detected at time 1417266500
+# Slave address  34 at time 1424180500
+# I2C_BUS READ Transfer:
+# READ DATA :  58
+# Stop Detected at time 1436641500 
+# 
+# Start Detected at time 1437131500
+# Slave address  34 at time 1444045500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  70
+# Stop Detected at time 1456507500 
+# 
+# Start Detected at time 1456997500
+# Slave address  34 at time 1463911500
+# I2C_BUS READ Transfer:
+# READ DATA :  57
+# Stop Detected at time 1476372500 
+# 
+# Start Detected at time 1476862500
+# Slave address  34 at time 1483776500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  71
+# Stop Detected at time 1496238500 
+# 
+# Start Detected at time 1496728500
+# Slave address  34 at time 1503642500
+# I2C_BUS READ Transfer:
+# READ DATA :  56
+# Stop Detected at time 1516103500 
+# 
+# Start Detected at time 1516593500
+# Slave address  34 at time 1523507500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  72
+# Stop Detected at time 1535969500 
+# 
+# Start Detected at time 1536459500
+# Slave address  34 at time 1543373500
+# I2C_BUS READ Transfer:
+# READ DATA :  55
+# Stop Detected at time 1555834500 
+# 
+# Start Detected at time 1556324500
+# Slave address  34 at time 1563238500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  73
+# Stop Detected at time 1575700500 
+# 
+# Start Detected at time 1576190500
+# Slave address  34 at time 1583104500
+# I2C_BUS READ Transfer:
+# READ DATA :  54
+# Stop Detected at time 1595565500 
+# 
+# Start Detected at time 1596055500
+# Slave address  34 at time 1602969500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  74
+# Stop Detected at time 1615431500 
+# 
+# Start Detected at time 1615921500
+# Slave address  34 at time 1622835500
+# I2C_BUS READ Transfer:
+# READ DATA :  53
+# Stop Detected at time 1635296500 
+# 
+# Start Detected at time 1635786500
+# Slave address  34 at time 1642700500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  75
+# Stop Detected at time 1655162500 
+# 
+# Start Detected at time 1655652500
+# Slave address  34 at time 1662566500
+# I2C_BUS READ Transfer:
+# READ DATA :  52
+# Stop Detected at time 1675027500 
+# 
+# Start Detected at time 1675517500
+# Slave address  34 at time 1682431500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  76
+# Stop Detected at time 1694893500 
+# 
+# Start Detected at time 1695383500
+# Slave address  34 at time 1702297500
+# I2C_BUS READ Transfer:
+# READ DATA :  51
+# Stop Detected at time 1714758500 
+# 
+# Start Detected at time 1715248500
+# Slave address  34 at time 1722162500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  77
+# Stop Detected at time 1734624500 
+# 
+# Start Detected at time 1735114500
+# Slave address  34 at time 1742028500
+# I2C_BUS READ Transfer:
+# READ DATA :  50
+# Stop Detected at time 1754489500 
+# 
+# Start Detected at time 1754979500
+# Slave address  34 at time 1761893500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  78
+# Stop Detected at time 1774355500 
+# 
+# Start Detected at time 1774845500
+# Slave address  34 at time 1781759500
+# I2C_BUS READ Transfer:
+# READ DATA :  49
+# Stop Detected at time 1794220500 
+# 
+# Start Detected at time 1794710500
+# Slave address  34 at time 1801624500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  79
+# Stop Detected at time 1814086500 
+# 
+# Start Detected at time 1814576500
+# Slave address  34 at time 1821490500
+# I2C_BUS READ Transfer:
+# READ DATA :  48
+# Stop Detected at time 1833951500 
+# 
+# Start Detected at time 1834441500
+# Slave address  34 at time 1841355500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  80
+# Stop Detected at time 1853817500 
+# 
+# Start Detected at time 1854307500
+# Slave address  34 at time 1861221500
+# I2C_BUS READ Transfer:
+# READ DATA :  47
+# Stop Detected at time 1873682500 
+# 
+# Start Detected at time 1874172500
+# Slave address  34 at time 1881086500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  81
+# Stop Detected at time 1893548500 
+# 
+# Start Detected at time 1894038500
+# Slave address  34 at time 1900952500
+# I2C_BUS READ Transfer:
+# READ DATA :  46
+# Stop Detected at time 1913413500 
+# 
+# Start Detected at time 1913903500
+# Slave address  34 at time 1920817500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  82
+# Stop Detected at time 1933279500 
+# 
+# Start Detected at time 1933769500
+# Slave address  34 at time 1940683500
+# I2C_BUS READ Transfer:
+# READ DATA :  45
+# Stop Detected at time 1953144500 
+# 
+# Start Detected at time 1953634500
+# Slave address  34 at time 1960548500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  83
+# Stop Detected at time 1973010500 
+# 
+# Start Detected at time 1973500500
+# Slave address  34 at time 1980414500
+# I2C_BUS READ Transfer:
+# READ DATA :  44
+# Stop Detected at time 1992875500 
+# 
+# Start Detected at time 1993365500
+# Slave address  34 at time 2000279500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  84
+# Stop Detected at time 2012741500 
+# 
+# Start Detected at time 2013231500
+# Slave address  34 at time 2020145500
+# I2C_BUS READ Transfer:
+# READ DATA :  43
+# Stop Detected at time 2032606500 
+# 
+# Start Detected at time 2033096500
+# Slave address  34 at time 2040010500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  85
+# Stop Detected at time 2052472500 
+# 
+# Start Detected at time 2052962500
+# Slave address  34 at time 2059876500
+# I2C_BUS READ Transfer:
+# READ DATA :  42
+# Stop Detected at time 2072337500 
+# 
+# Start Detected at time 2072827500
+# Slave address  34 at time 2079741500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  86
+# Stop Detected at time 2092203500 
+# 
+# Start Detected at time 2092693500
+# Slave address  34 at time 2099607500
+# I2C_BUS READ Transfer:
+# READ DATA :  41
+# Stop Detected at time 2112068500 
+# 
+# Start Detected at time 2112558500
+# Slave address  34 at time 2119472500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  87
+# Stop Detected at time 2131934500 
+# 
+# Start Detected at time 2132424500
+# Slave address  34 at time 2139338500
+# I2C_BUS READ Transfer:
+# READ DATA :  40
+# Stop Detected at time 2151799500 
+# 
+# Start Detected at time 2152289500
+# Slave address  34 at time 2159203500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  88
+# Stop Detected at time 2171665500 
+# 
+# Start Detected at time 2172155500
+# Slave address  34 at time 2179069500
+# I2C_BUS READ Transfer:
+# READ DATA :  39
+# Stop Detected at time 2191530500 
+# 
+# Start Detected at time 2192020500
+# Slave address  34 at time 2198934500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  89
+# Stop Detected at time 2211396500 
+# 
+# Start Detected at time 2211886500
+# Slave address  34 at time 2218800500
+# I2C_BUS READ Transfer:
+# READ DATA :  38
+# Stop Detected at time 2231261500 
+# 
+# Start Detected at time 2231751500
+# Slave address  34 at time 2238665500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  90
+# Stop Detected at time 2251127500 
+# 
+# Start Detected at time 2251617500
+# Slave address  34 at time 2258531500
+# I2C_BUS READ Transfer:
+# READ DATA :  37
+# Stop Detected at time 2270992500 
+# 
+# Start Detected at time 2271482500
+# Slave address  34 at time 2278396500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  91
+# Stop Detected at time 2290858500 
+# 
+# Start Detected at time 2291348500
+# Slave address  34 at time 2298262500
+# I2C_BUS READ Transfer:
+# READ DATA :  36
+# Stop Detected at time 2310723500 
+# 
+# Start Detected at time 2311213500
+# Slave address  34 at time 2318127500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  92
+# Stop Detected at time 2330589500 
+# 
+# Start Detected at time 2331079500
+# Slave address  34 at time 2337993500
+# I2C_BUS READ Transfer:
+# READ DATA :  35
+# Stop Detected at time 2350454500 
+# 
+# Start Detected at time 2350944500
+# Slave address  34 at time 2357858500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  93
+# Stop Detected at time 2370320500 
+# 
+# Start Detected at time 2370810500
+# Slave address  34 at time 2377724500
+# I2C_BUS READ Transfer:
+# READ DATA :  34
+# Stop Detected at time 2390185500 
+# 
+# Start Detected at time 2390675500
+# Slave address  34 at time 2397589500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  94
+# Stop Detected at time 2410051500 
+# 
+# Start Detected at time 2410541500
+# Slave address  34 at time 2417455500
+# I2C_BUS READ Transfer:
+# READ DATA :  33
+# Stop Detected at time 2429916500 
+# 
+# Start Detected at time 2430406500
+# Slave address  34 at time 2437320500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  95
+# Stop Detected at time 2449782500 
+# 
+# Start Detected at time 2450272500
+# Slave address  34 at time 2457186500
+# I2C_BUS READ Transfer:
+# READ DATA :  32
+# Stop Detected at time 2469647500 
+# 
+# Start Detected at time 2470137500
+# Slave address  34 at time 2477051500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  96
+# Stop Detected at time 2489513500 
+# 
+# Start Detected at time 2490003500
+# Slave address  34 at time 2496917500
+# I2C_BUS READ Transfer:
+# READ DATA :  31
+# Stop Detected at time 2509378500 
+# 
+# Start Detected at time 2509868500
+# Slave address  34 at time 2516782500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  97
+# Stop Detected at time 2529244500 
+# 
+# Start Detected at time 2529734500
+# Slave address  34 at time 2536648500
+# I2C_BUS READ Transfer:
+# READ DATA :  30
+# Stop Detected at time 2549109500 
+# 
+# Start Detected at time 2549599500
+# Slave address  34 at time 2556513500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  98
+# Stop Detected at time 2568975500 
+# 
+# Start Detected at time 2569465500
+# Slave address  34 at time 2576379500
+# I2C_BUS READ Transfer:
+# READ DATA :  29
+# Stop Detected at time 2588840500 
+# 
+# Start Detected at time 2589330500
+# Slave address  34 at time 2596244500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  99
+# Stop Detected at time 2608706500 
+# 
+# Start Detected at time 2609196500
+# Slave address  34 at time 2616110500
+# I2C_BUS READ Transfer:
+# READ DATA :  28
+# Stop Detected at time 2628571500 
+# 
+# Start Detected at time 2629061500
+# Slave address  34 at time 2635975500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 100
+# Stop Detected at time 2648437500 
+# 
+# Start Detected at time 2648927500
+# Slave address  34 at time 2655841500
+# I2C_BUS READ Transfer:
+# READ DATA :  27
+# Stop Detected at time 2668302500 
+# 
+# Start Detected at time 2668792500
+# Slave address  34 at time 2675706500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 101
+# Stop Detected at time 2688168500 
+# 
+# Start Detected at time 2688658500
+# Slave address  34 at time 2695572500
+# I2C_BUS READ Transfer:
+# READ DATA :  26
+# Stop Detected at time 2708033500 
+# 
+# Start Detected at time 2708523500
+# Slave address  34 at time 2715437500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 102
+# Stop Detected at time 2727899500 
+# 
+# Start Detected at time 2728389500
+# Slave address  34 at time 2735303500
+# I2C_BUS READ Transfer:
+# READ DATA :  25
+# Stop Detected at time 2747764500 
+# 
+# Start Detected at time 2748254500
+# Slave address  34 at time 2755168500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 103
+# Stop Detected at time 2767630500 
+# 
+# Start Detected at time 2768120500
+# Slave address  34 at time 2775034500
+# I2C_BUS READ Transfer:
+# READ DATA :  24
+# Stop Detected at time 2787495500 
+# 
+# Start Detected at time 2787985500
+# Slave address  34 at time 2794899500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 104
+# Stop Detected at time 2807361500 
+# 
+# Start Detected at time 2807851500
+# Slave address  34 at time 2814765500
+# I2C_BUS READ Transfer:
+# READ DATA :  23
+# Stop Detected at time 2827226500 
+# 
+# Start Detected at time 2827716500
+# Slave address  34 at time 2834630500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 105
+# Stop Detected at time 2847092500 
+# 
+# Start Detected at time 2847582500
+# Slave address  34 at time 2854496500
+# I2C_BUS READ Transfer:
+# READ DATA :  22
+# Stop Detected at time 2866957500 
+# 
+# Start Detected at time 2867447500
+# Slave address  34 at time 2874361500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 106
+# Stop Detected at time 2886823500 
+# 
+# Start Detected at time 2887313500
+# Slave address  34 at time 2894227500
+# I2C_BUS READ Transfer:
+# READ DATA :  21
+# Stop Detected at time 2906688500 
+# 
+# Start Detected at time 2907178500
+# Slave address  34 at time 2914092500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 107
+# Stop Detected at time 2926554500 
+# 
+# Start Detected at time 2927044500
+# Slave address  34 at time 2933958500
+# I2C_BUS READ Transfer:
+# READ DATA :  20
+# Stop Detected at time 2946419500 
+# 
+# Start Detected at time 2946909500
+# Slave address  34 at time 2953823500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 108
+# Stop Detected at time 2966285500 
+# 
+# Start Detected at time 2966775500
+# Slave address  34 at time 2973689500
+# I2C_BUS READ Transfer:
+# READ DATA :  19
+# Stop Detected at time 2986150500 
+# 
+# Start Detected at time 2986640500
+# Slave address  34 at time 2993554500
+# I2C_BUS WRITE Transfer:
+run 30 ms
+# WRITE DATA : 109
+# Stop Detected at time 3006016500 
+# 
+# Start Detected at time 3006506500
+# Slave address  34 at time 3013420500
+# I2C_BUS READ Transfer:
+# READ DATA :  18
+# Stop Detected at time 3025881500 
+# 
+# Start Detected at time 3026371500
+# Slave address  34 at time 3033285500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 110
+# Stop Detected at time 3045747500 
+# 
+# Start Detected at time 3046237500
+# Slave address  34 at time 3053151500
+# I2C_BUS READ Transfer:
+# READ DATA :  17
+# Stop Detected at time 3065612500 
+# 
+# Start Detected at time 3066102500
+# Slave address  34 at time 3073016500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 111
+# Stop Detected at time 3085478500 
+# 
+# Start Detected at time 3085968500
+# Slave address  34 at time 3092882500
+# I2C_BUS READ Transfer:
+# READ DATA :  16
+# Stop Detected at time 3105343500 
+# 
+# Start Detected at time 3105833500
+# Slave address  34 at time 3112747500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 112
+# Stop Detected at time 3125209500 
+# 
+# Start Detected at time 3125699500
+# Slave address  34 at time 3132613500
+# I2C_BUS READ Transfer:
+# READ DATA :  15
+# Stop Detected at time 3145074500 
+# 
+# Start Detected at time 3145564500
+# Slave address  34 at time 3152478500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 113
+# Stop Detected at time 3164940500 
+# 
+# Start Detected at time 3165430500
+# Slave address  34 at time 3172344500
+# I2C_BUS READ Transfer:
+# READ DATA :  14
+# Stop Detected at time 3184805500 
+# 
+# Start Detected at time 3185295500
+# Slave address  34 at time 3192209500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 114
+# Stop Detected at time 3204671500 
+# 
+# Start Detected at time 3205161500
+# Slave address  34 at time 3212075500
+# I2C_BUS READ Transfer:
+# READ DATA :  13
+# Stop Detected at time 3224536500 
+# 
+# Start Detected at time 3225026500
+# Slave address  34 at time 3231940500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 115
+# Stop Detected at time 3244402500 
+# 
+# Start Detected at time 3244892500
+# Slave address  34 at time 3251806500
+# I2C_BUS READ Transfer:
+# READ DATA :  12
+# Stop Detected at time 3264267500 
+# 
+# Start Detected at time 3264757500
+# Slave address  34 at time 3271671500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 116
+# Stop Detected at time 3284133500 
+# 
+# Start Detected at time 3284623500
+# Slave address  34 at time 3291537500
+# I2C_BUS READ Transfer:
+# READ DATA :  11
+# Stop Detected at time 3303998500 
+# 
+# Start Detected at time 3304488500
+# Slave address  34 at time 3311402500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 117
+# Stop Detected at time 3323864500 
+# 
+# Start Detected at time 3324354500
+# Slave address  34 at time 3331268500
+# I2C_BUS READ Transfer:
+# READ DATA :  10
+# Stop Detected at time 3343729500 
+# 
+# Start Detected at time 3344219500
+# Slave address  34 at time 3351133500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 118
+# Stop Detected at time 3363595500 
+# 
+# Start Detected at time 3364085500
+# Slave address  34 at time 3370999500
+# I2C_BUS READ Transfer:
+# READ DATA :   9
+# Stop Detected at time 3383460500 
+# 
+# Start Detected at time 3383950500
+# Slave address  34 at time 3390864500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 119
+# Stop Detected at time 3403326500 
+# 
+# Start Detected at time 3403816500
+# Slave address  34 at time 3410730500
+# I2C_BUS READ Transfer:
+# READ DATA :   8
+# Stop Detected at time 3423191500 
+# 
+# Start Detected at time 3423681500
+# Slave address  34 at time 3430595500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 120
+# Stop Detected at time 3443057500 
+# 
+# Start Detected at time 3443547500
+# Slave address  34 at time 3450461500
+# I2C_BUS READ Transfer:
+# READ DATA :   7
+# Stop Detected at time 3462922500 
+# 
+# Start Detected at time 3463412500
+# Slave address  34 at time 3470326500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 121
+# Stop Detected at time 3482788500 
+# 
+# Start Detected at time 3483278500
+# Slave address  34 at time 3490192500
+# I2C_BUS READ Transfer:
+# READ DATA :   6
+# Stop Detected at time 3502653500 
+# 
+# Start Detected at time 3503143500
+# Slave address  34 at time 3510057500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 122
+# Stop Detected at time 3522519500 
+# 
+# Start Detected at time 3523009500
+# Slave address  34 at time 3529923500
+# I2C_BUS READ Transfer:
+# READ DATA :   5
+# Stop Detected at time 3542384500 
+# 
+# Start Detected at time 3542874500
+# Slave address  34 at time 3549788500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 123
+# Stop Detected at time 3562250500 
+# 
+# Start Detected at time 3562740500
+# Slave address  34 at time 3569654500
+# I2C_BUS READ Transfer:
+# READ DATA :   4
+# Stop Detected at time 3582115500 
+# 
+# Start Detected at time 3582605500
+# Slave address  34 at time 3589519500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 124
+# Stop Detected at time 3601981500 
+# 
+# Start Detected at time 3602471500
+# Slave address  34 at time 3609385500
+# I2C_BUS READ Transfer:
+# READ DATA :   3
+# Stop Detected at time 3621846500 
+# 
+# Start Detected at time 3622336500
+# Slave address  34 at time 3629250500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 125
+# Stop Detected at time 3641712500 
+# 
+# Start Detected at time 3642202500
+# Slave address  34 at time 3649116500
+# I2C_BUS READ Transfer:
+# READ DATA :   2
+# Stop Detected at time 3661577500 
+# 
+# Start Detected at time 3662067500
+# Slave address  34 at time 3668981500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 126
+# Stop Detected at time 3681443500 
+# 
+# Start Detected at time 3681933500
+# Slave address  34 at time 3688847500
+# I2C_BUS READ Transfer:
+# READ DATA :   1
+# Stop Detected at time 3701308500 
+# 
+# Start Detected at time 3701798500
+# Slave address  34 at time 3708712500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 127
+# Stop Detected at time 3721174500 
+# 
+# Start Detected at time 3721664500
+# Slave address  34 at time 3728578500
+# I2C_BUS READ Transfer:
+# READ DATA :   0
+# Stop Detected at time 3741039500 
+# 
+# ** Note: $finish    : ../testbench/top.sv(399)
+#    Time: 37460625 ns  Iteration: 0  Instance: /top
+# 1
+# Break in Module top at ../testbench/top.sv line 399
+# End time: 23:15:22 on Mar 25,2023, Elapsed time: 1:36:59
+# Errors: 0, Warnings: 0

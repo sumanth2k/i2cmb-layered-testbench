@@ -1,0 +1,102 @@
+<!-- THIS IS TOOL GENERATED SESSION FILE. PLEASE DO NOT MODIFY THIS -->
+<!DOCTYPE visualizer_session>
+<session version="3" skip_do_file="0">
+ <app argc="5">
+  <argv value="vsim" pos="0"/>
+  <argv value="design.bin" pos="1"/>
+  <argv value="-do" pos="2"/>
+  <argv value="set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" pos="3"/>
+  <argv value="+_sv_debug_+vsim-64-onfinishstop-classdebug-uvmcontrol=all-msgmodeboth-permit_unmatched_virtual_intf-sv_seed123456-msglimiterror-msglimitcount20-qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc-libqrun.out/work-visualizer=design.bin-statslogqrun.out/stats_logqrun_opt-appendlog-csession=incr-csessionid=3" pos="4"/>
+ </app>
+ <window_config>
+  <dockareas top="0" bottom="358" right="450" left="204"/>
+  <taborder bottom="transcript+" left="files+structure+testbench+"/>
+  <activetab bottom="transcript" activewindow="transcript" left="structure"/>
+  <window y="0" type="files" undocked="0" x="0" dock_location="left" visible="1"/>
+  <window y="0" type="structure" undocked="0" x="0" dock_location="left" visible="1"/>
+  <window y="0" type="testbench" undocked="0" x="0" dock_location="left" visible="1"/>
+  <window y="0" type="transcript" undocked="0" x="0" dock_location="bottom" visible="1"/>
+  <window y="31" type="rtl" undocked="0" height="889" x="8" width="1536" visible="1"/>
+  <window y="31" type="wave" undocked="1" height="889" x="8" dock_location="bottom" width="1536" visible="1"/>
+  <window y="0" type="source" undocked="0" firstVisibleLine="124" x="0" dock_location="center" path="/mnt/ncsudrive/s/sjayam/745/test/project_benches/proj_2/testbench/top.sv" visible="1"/>
+ </window_config>
+ <wave_file_mgr>
+  <waveFile fileName="/mnt/ncsudrive/s/sjayam/745/test/project_benches/proj_2/sim/qwave.db" tagName="sim" waveType="0"/>
+ </wave_file_mgr>
+ <gui>
+  <main_window visible="1">
+   <srcbrowser filepath="/mnt/ncsudrive/s/sjayam/745/test/project_benches/proj_2/testbench/top.sv" primary="true" instancename="top"/>
+   <sourcetclcommands>
+    <tcl command="src activate source"/>
+    <tcl command="src top 125"/>
+   </sourcetclcommands>
+   <edge_gui cur_selection="AnyEdge"/>
+  </main_window>
+  <watchTower_cur_setting curRadix="2" customDisplayTimeUnitListStr="" curActiveWaveFile="sim" curDisplayTimeUnitStr="10ps" curDisplayTimeUnit="-11">
+   <curTime hightime="0" lowtime="3146825500"/>
+  </watchTower_cur_setting>
+  <files/>
+  <structure selection="top"/>
+  <testbench/>
+  <transcript/>
+  <wave name="Wave0">
+   <timeunit value="13"/>
+   <frequnit value="2"/>
+   <showdiff value="0"/>
+  </wave>
+ </gui>
+ <wave_mgr sync_time_range="0">
+  <waveWindow nameWidth="146" waveWidth="1262" value_tooltip="0" showMarkers="1" justifySignalPath="Right" swapRepresentationOfX="0" signalHeight="18" secNudge="1" snapToEdge="1" alignBaseName="0" displayGlobalView="1" displayGrid="0" wintype="4" displayRadixWithValue="1" showSecCursor="1" primNudge="1" displayScopeName="1" valueWidth="83" trackViewToTime="1" displayLeadingZeros="0" displayTimeUnit="-11" displayFileTag="1" displayTimeUnitStr="10ps">
+   <window name="Wave0">
+    <timeunit value="13"/>
+    <frequnit value="2"/>
+    <showdiff value="0"/>
+   </window>
+   <viewPort>
+    <beginTime hightime="0" lowtime="0"/>
+    <endTime hightime="0" lowtime="3146825500"/>
+    <beginViewTime hightime="0" lowtime="0"/>
+    <endViewTime hightime="0" lowtime="3146825500"/>
+    <beginLastViewTime hightime="0" lowtime="0"/>
+    <endLastViewTime hightime="0" lowtime="3146825500"/>
+   </viewPort>
+   <primCursor hightime="0" lowtime="3146825500"/>
+   <secCursor hightime="0" lowtime="0"/>
+   <wavetclcommands>
+    <tcl command="onerror resume&#xa;wave update off&#xa;wave clearselection&#xa;"/>
+    <tcl commandblock="custom radix definitions"></tcl>
+    <tcl command="wave pane split 355"/>
+    <tcl command="wave pane activate 0"/>
+    <tcl command="wave update off"/>
+    <tcl command="wave zoom range 0 3146825500"/>
+    <tcl command="wave update on"/>
+    <tcl command="wave top 0"/>
+    <tcl command="wave pane activate 1"/>
+    <tcl command="wave update off"/>
+    <tcl command="wave comment {I2C_MB}"/>
+    <tcl command="wave comment {WB Signals}"/>
+    <tcl command="wave add top.DUT.clk_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.rst_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.cyc_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.stb_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.ack_o -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.adr_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.we_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.dat_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.dat_o -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.irq -tag sim -radix hexadecimal"/>
+    <tcl command="wave comment {I2C Signals}"/>
+    <tcl command="wave add top.DUT.scl_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.sda_i -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.scl_o -tag sim -radix hexadecimal"/>
+    <tcl command="wave add top.DUT.sda_o -tag sim -radix hexadecimal"/>
+    <tcl command="wave update on"/>
+    <tcl command="wave top 0"/>
+    <tcl command=""/>
+   </wavetclcommands>
+  </waveWindow>
+ </wave_mgr>
+ <mem_mgr/>
+ <windows/>
+ <dut selection="top"/>
+</session>

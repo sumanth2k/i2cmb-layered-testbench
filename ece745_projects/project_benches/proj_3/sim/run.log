@@ -1,0 +1,893 @@
+QuestaSim qrun 2023.4 Utility 2023.10 Oct  9 2023
+Start time: 19:56:23 on Apr 04,2024
+qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -l run.log -f lab1_filelist.f -sv_seed 123456 -msglimit error -msglimitcount 20 -do "set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top -covermultiuserenv -designfile design.bin 
+Creating library 'qrun.out/work'.
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 19:56:23 on Apr 04,2024
+vlog -msglimit error -msglimitcount 20 -covermultiuserenv ../../../verification_ip/ncsu_pkg/ncsu_pkg.sv ../../../verification_ip/interface_packages/wb_pkg/wb_pkg.sv ../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv ../../../verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv ../../../verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv ../../../verification_ip/environment_packages/i2cmb_env_pkg/i2cmb_env_pkg.sv ../testbench/top.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=0 
+-- Compiling package ncsu_pkg
+-- Compiling package wb_pkg
+-- Importing package ncsu_pkg
+-- Compiling interface wb_if
+-- Compiling package macro_i2c
+-- Compiling package i2c_pkg_sv_unit
+-- Importing package macro_i2c
+-- Compiling interface i2c_if
+-- Compiling package i2c_pkg
+-- Compiling interface i2c_if
+** Warning: ../../../verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv(2): (vlog-2275) Existing interface 'i2c_if' at line 2 will be overwritten.
+-- Compiling package i2c_if_sv_unit
+-- Compiling interface i2c_if
+-- Compiling package i2cmb_env_pkg
+-- Importing package wb_pkg
+-- Importing package i2c_pkg
+-- Compiling package top_sv_unit
+-- Importing package i2cmb_env_pkg
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 19:56:25 on Apr 04,2024, Elapsed time: 0:00:02
+Errors: 0, Warnings: 1
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 19:56:25 on Apr 04,2024
+vcom -msglimit error -msglimitcount 20 -covermultiuserenv ../rtl/iicmb_int_pkg.vhd ../rtl/iicmb_pkg.vhd ../rtl/mbyte.vhd ../rtl/mbit.vhd ../rtl/bus_state.vhd ../rtl/filter.vhd ../rtl/conditioner.vhd ../rtl/conditioner_mux.vhd ../rtl/iicmb_m.vhd ../rtl/regblock.vhd ../rtl/wishbone.vhd ../rtl/iicmb_m_wb.vhd -work qrun.out/work -autoorder -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=1 
+-- Loading package STANDARD
+-- Scanning package iicmb_int_pkg
+-- Scanning package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Scanning package iicmb_pkg
+-- Scanning package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Scanning entity mbyte
+-- Scanning architecture rtl of mbyte
+-- Scanning entity mbit
+-- Scanning architecture rtl of mbit
+-- Scanning entity bus_state
+-- Scanning architecture rtl of bus_state
+-- Scanning entity filter
+-- Scanning architecture rtl of filter
+-- Scanning entity conditioner
+-- Scanning architecture str of conditioner
+-- Scanning entity conditioner_mux
+-- Scanning architecture str of conditioner_mux
+-- Scanning entity iicmb_m
+-- Scanning architecture str of iicmb_m
+-- Scanning entity regblock
+-- Scanning architecture rtl of regblock
+-- Scanning entity wishbone
+-- Scanning architecture rtl of wishbone
+-- Scanning entity iicmb_m_wb
+-- Scanning architecture str of iicmb_m_wb
+End time: 19:56:26 on Apr 04,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 19:56:26 on Apr 04,2024
+vcom -refresh_marked -work qrun.out/work -csession=incr -statslog qrun.out/stats_log 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bus_state
+-- Compiling architecture rtl of bus_state
+-- Compiling entity conditioner
+-- Compiling architecture str of conditioner
+-- Compiling entity conditioner_mux
+-- Compiling architecture str of conditioner_mux
+-- Compiling entity filter
+-- Compiling architecture rtl of filter
+-- Compiling package iicmb_int_pkg
+-- Compiling package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading package iicmb_int_pkg
+-- Compiling entity iicmb_m
+-- Compiling architecture str of iicmb_m
+-- Compiling entity iicmb_m_wb
+-- Compiling architecture str of iicmb_m_wb
+-- Compiling package iicmb_pkg
+-- Compiling package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Compiling entity mbit
+-- Compiling architecture rtl of mbit
+-- Loading package iicmb_pkg
+-- Compiling entity mbyte
+-- Compiling architecture rtl of mbyte
+-- Compiling entity regblock
+-- Compiling architecture rtl of regblock
+-- Compiling entity wishbone
+-- Compiling architecture rtl of wishbone
+End time: 19:56:27 on Apr 04,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 19:56:28 on Apr 04,2024
+vopt -msglimit error -msglimitcount 20 -debug,livesim -designfile design.bin top -work qrun.out/work -statslog qrun.out/stats_log -o qrun_opt -csession=incr -csessionid=2 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Loading interface wb_if
+-- Loading interface i2c_if
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity iicmb_m_wb
+-- Loading architecture str of iicmb_m_wb
+-- Loading entity wishbone
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading entity regblock
+-- Loading package iicmb_int_pkg
+-- Loading entity iicmb_m
+-- Loading architecture rtl of wishbone
+-- Loading architecture rtl of regblock
+-- Loading package body iicmb_pkg
+-- Loading architecture str of iicmb_m
+-- Loading entity mbyte
+-- Loading entity mbit
+-- Loading entity conditioner_mux
+-- Loading package body iicmb_int_pkg
+-- Loading architecture rtl of mbyte
+-- Loading architecture rtl of mbit
+-- Loading architecture str of conditioner_mux
+-- Loading entity conditioner
+-- Loading architecture str of conditioner
+-- Loading entity filter
+-- Loading entity bus_state
+-- Loading architecture rtl of filter
+-- Loading architecture rtl of bus_state
+Optimizing 26 design-units (inlining 2/3 module instances, 9/11 architecture instances):
+-- Optimizing package ncsu_pkg(fast)
+-- Optimizing package wb_pkg(fast)
+-- Optimizing package macro_i2c(fast)
+-- Optimizing package i2c_pkg(fast)
+-- Optimizing package i2c_if_sv_unit(fast)
+-- Optimizing package i2cmb_env_pkg(fast)
+-- Optimizing package top_sv_unit(fast)
+-- Inlining interface wb_if(fast__2)
+-- Inlining interface i2c_if(fast__2)
+-- Optimizing module top(fast)
+-- Optimizing interface i2c_if(fast)
+-- Optimizing interface wb_if(fast)
+-- Inlining architecture rtl of mbyte
+-- Inlining architecture rtl of mbit
+-- Inlining architecture rtl of filter
+-- Inlining architecture rtl of bus_state
+-- Inlining architecture str of conditioner
+-- Inlining architecture str of conditioner_mux
+-- Optimizing architecture str of iicmb_m
+-- Inlining architecture rtl of wishbone
+-- Inlining architecture rtl of regblock
+-- Optimizing architecture str of iicmb_m_wb
+-- Optimizing package iicmb_pkg
+-- Optimizing package body iicmb_pkg
+-- Optimizing package iicmb_int_pkg
+-- Optimizing package body iicmb_int_pkg
+viscom:
+VISCOM: Start time: 19:56:30 on Apr 04,2024
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux/../linux_x86_64/VisualizerRls/bin/viscom 2023.4 at 2023.10 Oct  9 2023
+VISCOM: Writing design.bin
+VISCOM: Done writing design.bin
+VISCOM: End time: 19:56:31 on Apr 04,2024, Elapsed time: 0:00:01 (Process Size : 380MB, Peak Process Size : 381MB)
+
+
+Optimized design name is qrun_opt
+End time: 19:56:31 on Apr 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls'
+# USER = 'sjayam'
+# Mentor Graphics software version 2023.4 (Build on Oct  9 2023)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do} -statslog qrun.out/stats_log qrun_opt -appendlog -l run.log -csession=incr -csessionid=3
+# vsim -64 -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -sv_seed 123456 -msglimit error -msglimitcount 20 -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -appendlog -csession=incr -csessionid=3 "+no_qwavedb_threading" 
+# Start time: 19:57:03 on Apr 04,2024
+# Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
+
+# Initiating qwavedb class logging
+
+
+# Done initiating qwavedb class logging
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.macro_i2c(fast)
+# Loading work.i2c_if_sv_unit(fast)
+# Loading work.wb_if(fast)
+# Loading work.i2c_if(fast)
+# Loading work.ncsu_pkg(fast)
+# Loading work.i2c_pkg(fast)
+# Loading work.wb_pkg(fast)
+# Loading work.i2cmb_env_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.iicmb_pkg(body)
+# Loading work.iicmb_m_wb(str)#1
+# Loading work.iicmb_int_pkg(body)
+# Loading work.iicmb_m(str)#1
+
+# 19:57:08: Loading design data...
+# 19:57:09: Loaded  design units
+# 19:57:09: Loaded  design hierarchy
+# Warning: The wave file cannot be loaded because either the simulation has not yet logged any data, or qwavedb logging has not been enabled.
+# set IterationLimit 140000
+# 140000
+# set NoQuitOnFinish 1
+# 1
+# coverage attribute -name TESTNAME -value test_top
+
+# coverage save -onexit test_top.ucdb
+
+# do wave.do
+# 19:57:15: Loading waveform header...
+# 19:57:15: Loaded  waveform header
+# 
+# *****************************************************************
+#    Using QuickLZ compression software.
+# *****************************************************************
+# 
+# Static tasks and functions will be logged.
+# Qwave threading will not be used.
+# 	Arrays of 1 unpacked dimension inside classes will be logged if they have 1024 or fewer elements
+# qwavedb_dumpvars: Initiating qwavedb class logging
+# 
+# 	Loading class filter file '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt'
+# 
+# qwavedb_dumpvars: Done initiating qwavedb class logging
+# Mentor Graphics software version 2023.4 (Build number 0)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+# 	 Class Filter File used = /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt
+# qwavedb_dumpvars: Initiating qwavedb waveform capturing
+# 
+# 	Arrays of 1 unpacked dimension will be logged if they have 1024 or fewer elements
+# QWAVEDB:  logging of additional nested aggregates (UPA of UPS of UPA) is enabled.
+# 
+# qwavedb_dumpvars: Done initiating qwavedb waveform capturing
+# 
+# Note (Q2V): The "configure" command is ignored in Visualizer.
+
+# ----------------------------------------------------------------
+# //  NCSU Package 
+# //  Version 1.0a
+# ----------------------------------------------------------------
+# 
+# 
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.wishbone_agent.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.wishbone_agent.monitor_wb called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.I2c_agent.driver called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.I2c_agent.monitor called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.pred called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.score called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.env.coverage called
+# NCSU_INFO:Time                    0:ncsu_component::build():  of test.gen called
+# Start condition detected at time 33500
+# Slave address  34 at time 6947500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :   0
+# WRITE DATA :   1
+# WRITE DATA :   2
+# WRITE DATA :   3
+# WRITE DATA :   4
+# WRITE DATA :   5
+# WRITE DATA :   6
+# WRITE DATA :   7
+# WRITE DATA :   8
+# WRITE DATA :   9
+# WRITE DATA :  10
+# WRITE DATA :  11
+# WRITE DATA :  12
+# WRITE DATA :  13
+# WRITE DATA :  14
+# WRITE DATA :  15
+# WRITE DATA :  16
+# WRITE DATA :  17
+# WRITE DATA :  18
+# WRITE DATA :  19
+# WRITE DATA :  20
+# WRITE DATA :  21
+# WRITE DATA :  22
+# WRITE DATA :  23
+# WRITE DATA :  24
+# WRITE DATA :  25
+# WRITE DATA :  26
+# WRITE DATA :  27
+# WRITE DATA :  28
+# WRITE DATA :  29
+# WRITE DATA :  30
+# WRITE DATA :  31
+# Start condition detected at time 299798500
+# Slave address  34 at time 306712500
+# I2C_BUS READ Transfer:
+# READ DATA : 100
+# READ DATA : 101
+# READ DATA : 102
+# READ DATA : 103
+# READ DATA : 104
+# READ DATA : 105
+# READ DATA : 106
+# READ DATA : 107
+# READ DATA : 108
+# READ DATA : 109
+# READ DATA : 110
+# READ DATA : 111
+# READ DATA : 112
+# READ DATA : 113
+# READ DATA : 114
+# READ DATA : 115
+# READ DATA : 116
+# READ DATA : 117
+# READ DATA : 118
+# READ DATA : 119
+# READ DATA : 120
+# READ DATA : 121
+# READ DATA : 122
+# READ DATA : 123
+# READ DATA : 124
+# READ DATA : 125
+# READ DATA : 126
+# READ DATA : 127
+# READ DATA : 128
+# READ DATA : 129
+# READ DATA : 130
+# READ DATA : 131
+# Start condition detected at time 599531500
+# Slave address  34 at time 606445500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  64
+# Start condition detected at time 619397500
+# Slave address  34 at time 626311500
+# I2C_BUS READ Transfer:
+# READ DATA :  63
+# Start condition detected at time 639262500
+# Slave address  34 at time 646176500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  65
+# Start condition detected at time 659128500
+# Slave address  34 at time 666042500
+# I2C_BUS READ Transfer:
+# READ DATA :  62
+# Start condition detected at time 678993500
+# Slave address  34 at time 685907500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  66
+# Start condition detected at time 698859500
+# Slave address  34 at time 705773500
+# I2C_BUS READ Transfer:
+# READ DATA :  61
+# Start condition detected at time 718724500
+# Slave address  34 at time 725638500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  67
+# Start condition detected at time 738590500
+# Slave address  34 at time 745504500
+# I2C_BUS READ Transfer:
+# READ DATA :  60
+# Start condition detected at time 758455500
+# Slave address  34 at time 765369500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  68
+# Start condition detected at time 778321500
+# Slave address  34 at time 785235500
+# I2C_BUS READ Transfer:
+# READ DATA :  59
+# Start condition detected at time 798186500
+# Slave address  34 at time 805100500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  69
+# Start condition detected at time 818052500
+# Slave address  34 at time 824966500
+# I2C_BUS READ Transfer:
+# READ DATA :  58
+# Start condition detected at time 837917500
+# Slave address  34 at time 844831500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  70
+# Start condition detected at time 857783500
+# Slave address  34 at time 864697500
+# I2C_BUS READ Transfer:
+# READ DATA :  57
+# Start condition detected at time 877648500
+# Slave address  34 at time 884562500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  71
+# Start condition detected at time 897514500
+# Slave address  34 at time 904428500
+# I2C_BUS READ Transfer:
+# READ DATA :  56
+# Start condition detected at time 917379500
+# Slave address  34 at time 924293500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  72
+# Start condition detected at time 937245500
+# Slave address  34 at time 944159500
+# I2C_BUS READ Transfer:
+# READ DATA :  55
+# Start condition detected at time 957110500
+# Slave address  34 at time 964024500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  73
+# Start condition detected at time 976976500
+# Slave address  34 at time 983890500
+# I2C_BUS READ Transfer:
+# READ DATA :  54
+# Start condition detected at time 996841500
+# Slave address  34 at time 1003755500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  74
+# Start condition detected at time 1016707500
+# Slave address  34 at time 1023621500
+# I2C_BUS READ Transfer:
+# READ DATA :  53
+# Start condition detected at time 1036572500
+# Slave address  34 at time 1043486500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  75
+# Start condition detected at time 1056438500
+# Slave address  34 at time 1063352500
+# I2C_BUS READ Transfer:
+# READ DATA :  52
+# Start condition detected at time 1076303500
+# Slave address  34 at time 1083217500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  76
+# Start condition detected at time 1096169500
+# Slave address  34 at time 1103083500
+# I2C_BUS READ Transfer:
+# READ DATA :  51
+# Start condition detected at time 1116034500
+# Slave address  34 at time 1122948500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  77
+# Start condition detected at time 1135900500
+# Slave address  34 at time 1142814500
+# I2C_BUS READ Transfer:
+# READ DATA :  50
+# Start condition detected at time 1155765500
+# Slave address  34 at time 1162679500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  78
+# Start condition detected at time 1175631500
+# Slave address  34 at time 1182545500
+# I2C_BUS READ Transfer:
+# READ DATA :  49
+# Start condition detected at time 1195496500
+# Slave address  34 at time 1202410500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  79
+# Start condition detected at time 1215362500
+# Slave address  34 at time 1222276500
+# I2C_BUS READ Transfer:
+# READ DATA :  48
+# Start condition detected at time 1235227500
+# Slave address  34 at time 1242141500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  80
+# Start condition detected at time 1255093500
+# Slave address  34 at time 1262007500
+# I2C_BUS READ Transfer:
+# READ DATA :  47
+# Start condition detected at time 1274958500
+# Slave address  34 at time 1281872500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  81
+# Start condition detected at time 1294824500
+# Slave address  34 at time 1301738500
+# I2C_BUS READ Transfer:
+# READ DATA :  46
+# Start condition detected at time 1314689500
+# Slave address  34 at time 1321603500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  82
+# Start condition detected at time 1334555500
+# Slave address  34 at time 1341469500
+# I2C_BUS READ Transfer:
+# READ DATA :  45
+# Start condition detected at time 1354420500
+# Slave address  34 at time 1361334500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  83
+# Start condition detected at time 1374286500
+# Slave address  34 at time 1381200500
+# I2C_BUS READ Transfer:
+# READ DATA :  44
+# Start condition detected at time 1394151500
+# Slave address  34 at time 1401065500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  84
+# Start condition detected at time 1414017500
+# Slave address  34 at time 1420931500
+# I2C_BUS READ Transfer:
+# READ DATA :  43
+# Start condition detected at time 1433882500
+# Slave address  34 at time 1440796500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  85
+# Start condition detected at time 1453748500
+# Slave address  34 at time 1460662500
+# I2C_BUS READ Transfer:
+# READ DATA :  42
+# Start condition detected at time 1473613500
+# Slave address  34 at time 1480527500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  86
+# Start condition detected at time 1493479500
+# Slave address  34 at time 1500393500
+# I2C_BUS READ Transfer:
+# READ DATA :  41
+# Start condition detected at time 1513344500
+# Slave address  34 at time 1520258500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  87
+# Start condition detected at time 1533210500
+# Slave address  34 at time 1540124500
+# I2C_BUS READ Transfer:
+# READ DATA :  40
+# Start condition detected at time 1553075500
+# Slave address  34 at time 1559989500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  88
+# Start condition detected at time 1572941500
+# Slave address  34 at time 1579855500
+# I2C_BUS READ Transfer:
+# READ DATA :  39
+# Start condition detected at time 1592806500
+# Slave address  34 at time 1599720500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  89
+# Start condition detected at time 1612672500
+# Slave address  34 at time 1619586500
+# I2C_BUS READ Transfer:
+# READ DATA :  38
+# Start condition detected at time 1632537500
+# Slave address  34 at time 1639451500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  90
+# Start condition detected at time 1652403500
+# Slave address  34 at time 1659317500
+# I2C_BUS READ Transfer:
+# READ DATA :  37
+# Start condition detected at time 1672268500
+# Slave address  34 at time 1679182500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  91
+# Start condition detected at time 1692134500
+# Slave address  34 at time 1699048500
+# I2C_BUS READ Transfer:
+# READ DATA :  36
+# Start condition detected at time 1711999500
+# Slave address  34 at time 1718913500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  92
+# Start condition detected at time 1731865500
+# Slave address  34 at time 1738779500
+# I2C_BUS READ Transfer:
+# READ DATA :  35
+# Start condition detected at time 1751730500
+# Slave address  34 at time 1758644500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  93
+# Start condition detected at time 1771596500
+# Slave address  34 at time 1778510500
+# I2C_BUS READ Transfer:
+# READ DATA :  34
+# Start condition detected at time 1791461500
+# Slave address  34 at time 1798375500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  94
+# Start condition detected at time 1811327500
+# Slave address  34 at time 1818241500
+# I2C_BUS READ Transfer:
+# READ DATA :  33
+# Start condition detected at time 1831192500
+# Slave address  34 at time 1838106500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  95
+# Start condition detected at time 1851058500
+# Slave address  34 at time 1857972500
+# I2C_BUS READ Transfer:
+# READ DATA :  32
+# Start condition detected at time 1870923500
+# Slave address  34 at time 1877837500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  96
+# Start condition detected at time 1890789500
+# Slave address  34 at time 1897703500
+# I2C_BUS READ Transfer:
+# READ DATA :  31
+# Start condition detected at time 1910654500
+# Slave address  34 at time 1917568500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  97
+# Start condition detected at time 1930520500
+# Slave address  34 at time 1937434500
+# I2C_BUS READ Transfer:
+# READ DATA :  30
+# Start condition detected at time 1950385500
+# Slave address  34 at time 1957299500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  98
+# Start condition detected at time 1970251500
+# Slave address  34 at time 1977165500
+# I2C_BUS READ Transfer:
+# READ DATA :  29
+# Start condition detected at time 1990116500
+# Slave address  34 at time 1997030500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA :  99
+# Start condition detected at time 2009982500
+# Slave address  34 at time 2016896500
+# I2C_BUS READ Transfer:
+# READ DATA :  28
+# Start condition detected at time 2029847500
+# Slave address  34 at time 2036761500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 100
+# Start condition detected at time 2049713500
+# Slave address  34 at time 2056627500
+# I2C_BUS READ Transfer:
+# READ DATA :  27
+# Start condition detected at time 2069578500
+# Slave address  34 at time 2076492500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 101
+# Start condition detected at time 2089444500
+# Slave address  34 at time 2096358500
+# I2C_BUS READ Transfer:
+# READ DATA :  26
+# Start condition detected at time 2109309500
+# Slave address  34 at time 2116223500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 102
+# Start condition detected at time 2129175500
+# Slave address  34 at time 2136089500
+# I2C_BUS READ Transfer:
+# READ DATA :  25
+# Start condition detected at time 2149040500
+# Slave address  34 at time 2155954500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 103
+# Start condition detected at time 2168906500
+# Slave address  34 at time 2175820500
+# I2C_BUS READ Transfer:
+# READ DATA :  24
+# Start condition detected at time 2188771500
+# Slave address  34 at time 2195685500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 104
+# Start condition detected at time 2208637500
+# Slave address  34 at time 2215551500
+# I2C_BUS READ Transfer:
+# READ DATA :  23
+# Start condition detected at time 2228502500
+# Slave address  34 at time 2235416500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 105
+# Start condition detected at time 2248368500
+# Slave address  34 at time 2255282500
+# I2C_BUS READ Transfer:
+# READ DATA :  22
+# Start condition detected at time 2268233500
+# Slave address  34 at time 2275147500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 106
+# Start condition detected at time 2288099500
+# Slave address  34 at time 2295013500
+# I2C_BUS READ Transfer:
+# READ DATA :  21
+# Start condition detected at time 2307964500
+# Slave address  34 at time 2314878500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 107
+# Start condition detected at time 2327830500
+# Slave address  34 at time 2334744500
+# I2C_BUS READ Transfer:
+# READ DATA :  20
+# Start condition detected at time 2347695500
+# Slave address  34 at time 2354609500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 108
+# Start condition detected at time 2367561500
+# Slave address  34 at time 2374475500
+# I2C_BUS READ Transfer:
+# READ DATA :  19
+# Start condition detected at time 2387426500
+# Slave address  34 at time 2394340500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 109
+# Start condition detected at time 2407292500
+# Slave address  34 at time 2414206500
+# I2C_BUS READ Transfer:
+# READ DATA :  18
+# Start condition detected at time 2427157500
+# Slave address  34 at time 2434071500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 110
+# Start condition detected at time 2447023500
+# Slave address  34 at time 2453937500
+# I2C_BUS READ Transfer:
+# READ DATA :  17
+# Start condition detected at time 2466888500
+# Slave address  34 at time 2473802500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 111
+# Start condition detected at time 2486754500
+# Slave address  34 at time 2493668500
+# I2C_BUS READ Transfer:
+# READ DATA :  16
+# Start condition detected at time 2506619500
+# Slave address  34 at time 2513533500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 112
+# Start condition detected at time 2526485500
+# Slave address  34 at time 2533399500
+# I2C_BUS READ Transfer:
+# READ DATA :  15
+# Start condition detected at time 2546350500
+# Slave address  34 at time 2553264500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 113
+# Start condition detected at time 2566216500
+# Slave address  34 at time 2573130500
+# I2C_BUS READ Transfer:
+# READ DATA :  14
+# Start condition detected at time 2586081500
+# Slave address  34 at time 2592995500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 114
+# Start condition detected at time 2605947500
+# Slave address  34 at time 2612861500
+# I2C_BUS READ Transfer:
+# READ DATA :  13
+# Start condition detected at time 2625812500
+# Slave address  34 at time 2632726500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 115
+# Start condition detected at time 2645678500
+# Slave address  34 at time 2652592500
+# I2C_BUS READ Transfer:
+# READ DATA :  12
+# Start condition detected at time 2665543500
+# Slave address  34 at time 2672457500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 116
+# Start condition detected at time 2685409500
+# Slave address  34 at time 2692323500
+# I2C_BUS READ Transfer:
+# READ DATA :  11
+# Start condition detected at time 2705274500
+# Slave address  34 at time 2712188500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 117
+# Start condition detected at time 2725140500
+# Slave address  34 at time 2732054500
+# I2C_BUS READ Transfer:
+# READ DATA :  10
+# Start condition detected at time 2745005500
+# Slave address  34 at time 2751919500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 118
+# Start condition detected at time 2764871500
+# Slave address  34 at time 2771785500
+# I2C_BUS READ Transfer:
+# READ DATA :   9
+# Start condition detected at time 2784736500
+# Slave address  34 at time 2791650500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 119
+# Start condition detected at time 2804602500
+# Slave address  34 at time 2811516500
+# I2C_BUS READ Transfer:
+# READ DATA :   8
+# Start condition detected at time 2824467500
+# Slave address  34 at time 2831381500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 120
+# Start condition detected at time 2844333500
+# Slave address  34 at time 2851247500
+# I2C_BUS READ Transfer:
+# READ DATA :   7
+# Start condition detected at time 2864198500
+# Slave address  34 at time 2871112500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 121
+# Start condition detected at time 2884064500
+# Slave address  34 at time 2890978500
+# I2C_BUS READ Transfer:
+# READ DATA :   6
+# Start condition detected at time 2903929500
+# Slave address  34 at time 2910843500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 122
+# Start condition detected at time 2923795500
+# Slave address  34 at time 2930709500
+# I2C_BUS READ Transfer:
+# READ DATA :   5
+# Start condition detected at time 2943660500
+# Slave address  34 at time 2950574500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 123
+# Start condition detected at time 2963526500
+# Slave address  34 at time 2970440500
+# I2C_BUS READ Transfer:
+# READ DATA :   4
+# Start condition detected at time 2983391500
+# Slave address  34 at time 2990305500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 124
+# Start condition detected at time 3003257500
+# Slave address  34 at time 3010171500
+# I2C_BUS READ Transfer:
+# READ DATA :   3
+# Start condition detected at time 3023122500
+# Slave address  34 at time 3030036500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 125
+# Start condition detected at time 3042988500
+# Slave address  34 at time 3049902500
+# I2C_BUS READ Transfer:
+# READ DATA :   2
+# Start condition detected at time 3062853500
+# Slave address  34 at time 3069767500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 126
+# Start condition detected at time 3082719500
+# Slave address  34 at time 3089633500
+# I2C_BUS READ Transfer:
+# READ DATA :   1
+# Start condition detected at time 3102584500
+# Slave address  34 at time 3109498500
+# I2C_BUS WRITE Transfer:
+# WRITE DATA : 127
+# Start condition detected at time 3122450500
+# Slave address  34 at time 3129364500
+# I2C_BUS READ Transfer:
+# READ DATA :   0
+# ** Note: $finish    : ../testbench/top.sv(141)
+#    Time: 31468255 ns  Iteration: 0  Instance: .top
+# Stopped at ../testbench/top.sv line 141
+# Break in Module top at ../testbench/top.sv line 141
+# Window layout 'Default' saved in file: /mnt/ncsudrive/s/sjayam/.visualizer/layout.xml
+# Saving coverage database on exit...
+# qwavedb_dumpvars : Simulation ending at [0 3146825500] 0
+# ========= Visualizer Dump Summary report =========
+# 	 #Design Ids       = 138
+# 	 #Assertion Ids    = 3
+# 	 #Class Ids        = 329 (Recycled = 0)
+# 	 #Message Ids      = 2
+# 	 #Total Ids        = 477
+# 	 #Swaps            = 15
+# 	  Id Memory        = 45.79 KB
+# 	  Swap Memory      = 50.00 MB
+# ========= End of Visualizer Dump Summary report =========
+# End time: 19:57:52 on Apr 04,2024, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vcom: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   1
+#     vopt: Errors:   0, Warnings:   0
+#     vsim: Errors:   0, Warnings:   0
+#   Totals: Errors:   0, Warnings:   1
+# Start  : Thu 04 Apr 2024 07:56:37 PM EDT
+# End    : Thu 04 Apr 2024 07:57:52 PM EDT
+# VMSize : 1464128 kB
+# VMPeak : 1464132 kB
